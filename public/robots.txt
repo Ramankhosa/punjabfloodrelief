@@ -1,0 +1,16 @@
+# Robots.txt for Punjab Flood Relief Service Request
+# Allow all crawlers to access the service request page
+
+User-agent: *
+Allow: /
+Allow: /service-request
+Allow: /service-request/confirmation
+
+# Disallow admin areas
+Disallow: /admin
+Disallow: /api/admin
+Disallow: /auth
+Disallow: /dashboard
+
+# Sitemap
+Sitemap: /sitemap.xml

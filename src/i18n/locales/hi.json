@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "title": "PFR – सहायता के लिए अनुरोध करें",
+    "helpline": "हेल्पलाइन",
+    "languages": {
+      "punjabi": "ਪੰਜਾਬੀ",
+      "hindi": "हिन्दी",
+      "english": "English"
+    }
+  },
+  "consent": {
+    "purpose": "कृपया अपनी जानकारी और आवश्यक सेवाएं बताएं।",
+    "location": {
+      "useGps": "GPS का उपयोग करें",
+      "skip": "छोड़ें",
+      "gettingLocation": "स्थान प्राप्त किया जा रहा है...",
+      "gpsSet": "GPS सेट (±{accuracy}m)",
+      "gpsDenied": "GPS अस्वीकृत"
+    }
+  },
+  "userDetails": {
+    "name": "नाम",
+    "namePlaceholder": "अपना पूरा नाम दर्ज करें",
+    "mobile": "मोबाइल नंबर",
+    "mobilePlaceholder": "+91 XXXXX XXXXX",
+    "alternateNumber": "कोई दूसरा नंबर",
+    "alternateNumberPlaceholder": "वैकल्पिक नंबर (वैकल्पिक)"
+  },
+  "location": {
+    "villageFinder": {
+      "search": "गांव खोजें...",
+      "searchPlaceholder": "गांव का नाम टाइप करें...",
+      "resultFormat": "{village} — {tehsil} — {district}"
+    },
+    "hierarchy": {
+      "district": "जिला",
+      "districtPlaceholder": "जिला चुनें",
+      "tehsil": "तहसील",
+      "tehsilPlaceholder": "तहसील चुनें",
+      "village": "गांव",
+      "villagePlaceholder": "गांव चुनें"
+    },
+    "tools": {
+      "useGps": "GPS का उपयोग करें",
+      "suggestNearest": "नजदीकी गांव सुझाएं",
+      "dropPin": "मिनी-मैप पर पिन ड्रॉप करें"
+    }
+  },
+  "services": {
+    "title": "आपको क्या चाहिए?",
+    "food": "खाना",
+    "rescue": "बचाव",
+    "animalFodder": "पशु चारा",
+    "medicalEmergency": "चिकित्सा आपातकाल",
+    "boat": "नाव",
+    "shelter": "आश्रय"
+  },
+  "serviceDetails": {
+    "food": {
+      "peopleCount": "लोगों की संख्या",
+      "needType": "आवश्यकता का प्रकार",
+      "cookedFood": "पकाया हुआ खाना",
+      "dryRation": "सूखा राशन",
+      "duration": "अवधि",
+      "today": "आज",
+      "days3": "1–3 दिन",
+      "daysMore": ">3 दिन"
+    },
+    "rescue": {
+      "peopleStranded": "लोग फंसे हुए",
+      "waterLevel": "पानी का स्तर",
+      "knee": "घुटने तक",
+      "waist": "कमर तक",
+      "chest": "छाती+",
+      "accessNotes": "पहुंच नोट्स",
+      "highRisk": "उच्च जोखिम"
+    },
+    "animalFodder": {
+      "animalsCount": "जानवरों की संख्या",
+      "type": "प्रकार",
+      "cattle": "गाय",
+      "buffalo": "भैंस",
+      "goatSheep": "बकरी/भेड़",
+      "other": "अन्य",
+      "urgency": "तात्कालिकता",
+      "today": "आज",
+      "hrs48": "48 घंटे"
+    },
+    "medicalEmergency": {
+      "symptoms": "लक्षण / आवश्यकता",
+      "patientCount": "मरीजों की संख्या",
+      "critical": "खून बहना / बेहोश / गंभीर",
+      "medication": "दवा चाहिए?",
+      "call108": "108 पर कॉल करें"
+    },
+    "boat": {
+      "peopleToMove": "लोग ले जाने के लिए",
+      "pickupLandmark": "पिकअप लैंडमार्क",
+      "waterFlow": "पानी का बहाव",
+      "calm": "शांत",
+      "fast": "तेज"
+    },
+    "shelter": {
+      "peopleCount": "लोगों की संख्या",
+      "specialNeeds": "विशेष आवश्यकताएं",
+      "elderly": "बुजुर्ग",
+      "children": "बच्चे",
+      "disabled": "विकलांग व्यक्ति",
+      "daysNeeded": "दिन चाहिए",
+      "priorityRouting": "प्राथमिकता रूटिंग फ्लैग"
+    }
+  },
+  "optional": {
+    "note": "अतिरिक्त नोट",
+    "notePlaceholder": "कोई अतिरिक्त जानकारी...",
+    "addPhoto": "फोटो जोड़ें",
+    "recordAudio": "ऑडियो संदेश रिकॉर्ड करें"
+  },
+  "consent": {
+    "checkbox": "राहत टीमों के साथ मेरा नंबर और स्थान साझा करें।",
+    "submit": "अनुरोध भेजें"
+  },
+  "confirmation": {
+    "title": "अनुरोध सबमिट हो गया!",
+    "requestId": "अनुरोध ID",
+    "whatNext": "बचाव दल आपातकालीनता के आधार पर अनुरोधों को प्राथमिकता दे रहे हैं।",
+    "share": "साझा करें",
+    "submitAnother": "एक और अनुरोध भेजें",
+    "addUpdate": "बाद में अपडेट जोड़ें"
+  },
+  "validation": {
+    "nameRequired": "नाम आवश्यक है",
+    "mobileRequired": "मोबाइल नंबर आवश्यक है",
+    "mobileInvalid": "कृपया वैध मोबाइल नंबर दर्ज करें",
+    "villageRequired": "कृपया अपना गांव चुनें",
+    "selectService": "कृपया कम से कम एक सेवा चुनें",
+    "noteTooLong": "नोट 120 अक्षरों से कम होना चाहिए"
+  },
+  "errors": {
+    "locationFailed": "स्थान प्राप्त करने में असमर्थ। कृपया गांव मैन्युअल रूप से चुनें।",
+    "submitFailed": "अनुरोध सबमिट करने में विफल। कृपया पुनः प्रयास करें।",
+    "offline": "आप ऑफलाइन हैं। कनेक्शन बहाल होने पर अनुरोध भेजा जाएगा।",
+    "networkError": "नेटवर्क त्रुटि। कृपया अपना कनेक्शन जांचें।"
+  },
+  "status": {
+    "saving": "सहेजा जा रहा है...",
+    "retry": "पुनः प्रयास करें",
+    "accuracyLow": "GPS सटीकता कम—गांव मैन्युअल रूप से चुनें।"
+  },
+  "confirmation": {
+    "shareMessage": "मेरी बाढ़ राहत अनुरोध ID {requestId} है। कृपया मदद करें!"
+  },
+  "serviceDetails": {
+    "details": "विवरण"
+  }
+}

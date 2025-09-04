@@ -36,8 +36,8 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link href="/auth/signup">
-                Join the Network
+              <Link href="/pa">
+                Request Relief Services
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
@@ -45,6 +45,22 @@ export default function Home() {
                 Access Dashboard
               </Link>
             </Button>
+          </div>
+
+          {/* Language Options */}
+          <div className="mt-6">
+            <p className="text-sm text-muted mb-3">Choose your language:</p>
+            <div className="flex gap-2 justify-center">
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/pa">ਪੰਜਾਬੀ</Link>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/hi">हिन्दी</Link>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/en">English</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

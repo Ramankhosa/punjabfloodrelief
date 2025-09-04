@@ -11,6 +11,31 @@
   --success: #16A34A;
   --warn: #D97706;
   --muted: #6B7280;
+
+  /* Dropdown/Popover colors - solid backgrounds for readability */
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+
+  /* Input field colors */
+  --input: #FFFFFF;
+  --border: #D1D5DB;
+
+  /* Focus ring */
+  --ring: #2563EB;
+
+  /* Card background */
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+
+  /* Accent colors for selection */
+  --accent-foreground: #FFFFFF;
+
+  /* Muted colors */
+  --muted-foreground: #6B7280;
+
+  /* Destructive colors */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
 }
 
 @theme inline {
@@ -24,7 +49,36 @@
   --color-success: var(--success);
   --color-warn: var(--warn);
   --color-muted: var(--muted);
+
+  /* Dropdown/Popover colors */
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  /* Input colors */
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  /* Card colors */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  /* Selection colors */
+  --color-accent-foreground: var(--accent-foreground);
+
+  /* Muted foreground */
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Destructive colors */
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif;
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -33,4 +87,167 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lightweight responsive utilities */
+.container-fluid {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .container-fluid {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-fluid {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-fluid {
+    max-width: 1280px;
+  }
+}
+
+/* Optimized form controls */
+.form-input {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input:focus {
+  outline: 0;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Button optimizations */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: rgba(37, 99, 235, 0.9);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Service grid responsive */
+.service-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+@media (min-width: 640px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Loading spinner */
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible for keyboard navigation */
+.focus-visible:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* PROJECT RULE: No transparent dropdown menus - ensure solid backgrounds */
+[data-radix-popper-content-wrapper] [data-radix-select-content],
+[data-radix-select-content] {
+  background-color: var(--popover) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  color: var(--popover-foreground) !important;
+}
+
+/* Ensure select items have proper backgrounds */
+[data-radix-select-item] {
+  background-color: var(--popover) !important;
+  color: var(--popover-foreground) !important;
+}
+
+[data-radix-select-item][data-highlighted] {
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+}
+
+/* Ensure select trigger has proper background */
+[data-radix-select-trigger] {
+  background-color: var(--input) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--foreground) !important;
+}
+
+/* Override any transparent backgrounds that might be set elsewhere */
+select,
+option,
+[data-radix-select-content],
+[data-radix-select-item],
+[data-radix-select-trigger] {
+  background-color: inherit !important;
+  opacity: 1 !important;
 }

@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "title": "PFR – ਮਦਦ ਲਈ ਬੇਨਤੀ ਕਰੋ",
+    "helpline": "ਹੈਲਪਲਾਈਨ",
+    "languages": {
+      "punjabi": "ਪੰਜਾਬੀ",
+      "hindi": "हिन्दी",
+      "english": "English"
+    }
+  },
+  "consent": {
+    "purpose": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਜਾਣਕਾਰੀ ਤੇ ਲੋੜੀਂਦੀ ਸੇਵਾ ਦੱਸੋ।",
+    "location": {
+      "useGps": "GPS ਵਰਤੋ",
+      "skip": "ਛੱਡੋ",
+      "gettingLocation": "ਲੋਕੇਸ਼ਨ ਮਿਲ ਰਹੀ ਹੈ...",
+      "gpsSet": "GPS ਸੈੱਟ (±{accuracy}m)",
+      "gpsDenied": "GPS ਇਨਕਾਰ ਕੀਤਾ"
+    }
+  },
+  "userDetails": {
+    "name": "ਨਾਮ",
+    "namePlaceholder": "ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+    "mobile": "ਮੋਬਾਈਲ ਨੰਬਰ",
+    "mobilePlaceholder": "+91 XXXXX XXXXX",
+    "alternateNumber": "ਕੋਈ ਦੂਸਰਾ ਨੰਬਰ",
+    "alternateNumberPlaceholder": "ਵਿਕਲਪਿਕ ਨੰਬਰ (ਵਿਕਲਪਿਕ)"
+  },
+  "location": {
+    "villageFinder": {
+      "search": "ਪਿੰਡ ਲੱਭੋ...",
+      "searchPlaceholder": "ਪਿੰਡ ਦਾ ਨਾਮ ਟਾਈਪ ਕਰੋ...",
+      "resultFormat": "{village} — {tehsil} — {district}"
+    },
+    "hierarchy": {
+      "district": "ਜ਼ਿਲਾ",
+      "districtPlaceholder": "ਜ਼ਿਲਾ ਚੁਣੋ",
+      "tehsil": "ਤਹਿਸੀਲ",
+      "tehsilPlaceholder": "ਤਹਿਸੀਲ ਚੁਣੋ",
+      "village": "ਪਿੰਡ",
+      "villagePlaceholder": "ਪਿੰਡ ਚੁਣੋ"
+    },
+    "tools": {
+      "useGps": "GPS ਵਰਤੋ",
+      "suggestNearest": "ਨਜ਼ਦੀਕੀ ਪਿੰਡ ਸੁਝਾਓ",
+      "dropPin": "ਮਿੰਨੀ-ਮੈਪ ਤੇ ਪਿੰਨ ਡ੍ਰੌਪ ਕਰੋ"
+    }
+  },
+  "services": {
+    "title": "ਤੁਹਾਨੂੰ ਕੀ ਚਾਹੀਦਾ ਹੈ?",
+    "food": "ਖਾਣਾ",
+    "rescue": "ਬਚਾਅ",
+    "animalFodder": "ਪਸ਼ੂ ਚਾਰਾ",
+    "medicalEmergency": "ਤਬੀ ਐਮਰਜੈਂਸੀ",
+    "boat": "ਨੌਕਾ",
+    "shelter": "ਆਸ਼ਰੇ"
+  },
+  "serviceDetails": {
+    "food": {
+      "peopleCount": "ਲੋਕਾਂ ਦੀ ਗਿਣਤੀ",
+      "needType": "ਲੋੜ ਦੀ ਕਿਸਮ",
+      "cookedFood": "ਪਕਾਇਆ ਖਾਣਾ",
+      "dryRation": "ਸੂਖਾ ਰਾਸ਼ਨ",
+      "duration": "ਅਵਧੀ",
+      "today": "ਅੱਜ",
+      "days3": "1–3 ਦਿਨ",
+      "daysMore": ">3 ਦਿਨ"
+    },
+    "rescue": {
+      "peopleStranded": "ਲੋਕ ਫਸੇ ਹੋਏ",
+      "waterLevel": "ਪਾਣੀ ਦਾ ਲੈਵਲ",
+      "knee": "ਗੋਦੇ ਤੱਕ",
+      "waist": "ਕਮਰ ਤੱਕ",
+      "chest": "ਛਾਤੀ+",
+      "accessNotes": "ਪਹੁੰਚ ਨੋਟਸ",
+      "highRisk": "ਉੱਚ ਜੋਖਮ"
+    },
+    "animalFodder": {
+      "animalsCount": "ਜਾਨਵਰਾਂ ਦੀ ਗਿਣਤੀ",
+      "type": "ਕਿਸਮ",
+      "cattle": "ਗਊਵਾਂ",
+      "buffalo": "ਭੈਂਸਾਂ",
+      "goatSheep": "ਬੱਕਰੀਆਂ/ਭੇਡ਼ਾਂ",
+      "other": "ਹੋਰ",
+      "urgency": "ਜ਼ਰੂਰਤ",
+      "today": "ਅੱਜ",
+      "hrs48": "48 ਘੰਟੇ"
+    },
+    "medicalEmergency": {
+      "symptoms": "ਲੱਛਣ / ਲੋੜ",
+      "patientCount": "ਮਰੀਜ਼ਾਂ ਦੀ ਗਿਣਤੀ",
+      "critical": "ਖੂਨ ਨਿਕਲਣਾ / ਬੇਹੋਸ਼ / ਗੰਭੀਰ",
+      "medication": "ਦਵਾਈ ਚਾਹੀਦੀ?",
+      "call108": "108 ਕਾਲ ਕਰੋ"
+    },
+    "boat": {
+      "peopleToMove": "ਲੋਕ ਲਿਜਾਣੇ",
+      "pickupLandmark": "ਪਿਕਅੱਪ ਲੈਂਡਮਾਰਕ",
+      "waterFlow": "ਪਾਣੀ ਦਾ ਵਹਾਅ",
+      "calm": "ਸ਼ਾਂਤ",
+      "fast": "ਤੇਜ਼"
+    },
+    "shelter": {
+      "peopleCount": "ਲੋਕਾਂ ਦੀ ਗਿਣਤੀ",
+      "specialNeeds": "ਵਿਸ਼ੇਸ਼ ਲੋੜਾਂ",
+      "elderly": "ਬੁਜ਼ੁਰਗ",
+      "children": "ਬੱਚੇ",
+      "disabled": "ਅਪਾਹਿਜ ਵਿਅਕਤੀ",
+      "daysNeeded": "ਦਿਨ ਚਾਹੀਦੇ",
+      "priorityRouting": "ਤਰਜੀਹੀ ਰੂਟਿੰਗ ਫਲੈਗ"
+    }
+  },
+  "optional": {
+    "note": "ਵਾਧੂ ਨੋਟ",
+    "notePlaceholder": "ਕੋਈ ਵਾਧੂ ਜਾਣਕਾਰੀ...",
+    "addPhoto": "ਫੋਟੋ ਸ਼ਾਮਲ ਕਰੋ",
+    "recordAudio": "ਆਡੀਓ ਮੈਸੇਜ ਰਿਕਾਰਡ ਕਰੋ"
+  },
+  "consent": {
+    "checkbox": "ਰਿਲੀਫ ਟੀਮਾਂ ਨਾਲ ਮੇਰਾ ਨੰਬਰ ਅਤੇ ਲੋਕੇਸ਼ਨ ਸ਼ੇਅਰ ਕਰੋ।",
+    "submit": "ਬੇਨਤੀ ਭੇਜੋ"
+  },
+  "confirmation": {
+    "title": "ਬੇਨਤੀ ਮਿਲ ਗਈ!",
+    "requestId": "ਬੇਨਤੀ ID",
+    "whatNext": "ਰੈਸਕਿਊ ਟੀਮਾਂ ਜ਼ਰੂਰਤ ਅਨੁਸਾਰ ਬੇਨਤੀਆਂ ਦੀ ਪ੍ਰਾਈਓਰਿਟੀ ਬਣਾ ਰਹੀਆਂ ਹਨ।",
+    "share": "ਸ਼ੇਅਰ ਕਰੋ",
+    "submitAnother": "ਇੱਕ ਹੋਰ ਬੇਨਤੀ ਭੇਜੋ",
+    "addUpdate": "ਬਾਅਦ ਵਿੱਚ ਅਪਡੇਟ ਸ਼ਾਮਲ ਕਰੋ"
+  },
+  "validation": {
+    "nameRequired": "ਨਾਮ ਲੋੜੀਂਦਾ ਹੈ",
+    "mobileRequired": "ਮੋਬਾਈਲ ਨੰਬਰ ਲੋੜੀਂਦਾ ਹੈ",
+    "mobileInvalid": "ਕਿਰਪਾ ਕਰਕੇ ਵੈਧ ਮੋਬਾਈਲ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+    "villageRequired": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਪਿੰਡ ਚੁਣੋ",
+    "selectService": "ਕਿਰਪਾ ਕਰਕੇ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਸੇਵਾ ਚੁਣੋ",
+    "noteTooLong": "ਨੋਟ 120 ਅੱਖਰਾਂ ਤੋਂ ਘੱਟ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"
+  },
+  "errors": {
+    "locationFailed": "ਲੋਕੇਸ਼ਨ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕਰ ਸਕੇ। ਕਿਰਪਾ ਕਰਕੇ ਪਿੰਡ ਮੈਨੂਅਲੀ ਚੁਣੋ।",
+    "submitFailed": "ਬੇਨਤੀ ਭੇਜਣ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    "offline": "ਤੁਸੀਂ ਆਫਲਾਈਨ ਹੋ। ਕਨੈਕਸ਼ਨ ਰੀਸਟੋਰ ਹੋਣ ਤੇ ਬੇਨਤੀ ਭੇਜੀ ਜਾਵੇਗੀ।",
+    "networkError": "ਨੈਟਵਰਕ ਗਲਤੀ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਕਨੈਕਸ਼ਨ ਚੈੱਕ ਕਰੋ।"
+  },
+  "status": {
+    "saving": "ਸੇਵ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+    "retry": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "accuracyLow": "GPS ਐਕਿਊਰੇਸੀ ਘੱਟ—ਪਿੰਡ ਮੈਨੂਅਲੀ ਚੁਣੋ।"
+  },
+  "confirmation": {
+    "shareMessage": "ਮੇਰੀ ਬੋਧ ਰਾਹਤ ਬੇਨਤੀ ID {requestId} ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਮਦਦ ਕਰੋ!"
+  },
+  "serviceDetails": {
+    "details": "ਵੇਰਵੇ"
+  }
+}

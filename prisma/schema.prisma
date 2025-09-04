@@ -81,6 +81,7 @@ model ReliefGroup {
   audit_logs          AuditLog[]
   documents           Document[]
   representatives     GroupRepresentative[]
+  assigned_requests   ServiceRequest[]
   created_by_user     User                  @relation(fields: [created_by_user_id], references: [user_id])
   reviewed_by_user    User?                 @relation(fields: [reviewed_by_user_id], references: [user_id], name: "reviewed_by")
   home_district       District?             @relation(fields: [home_district_code], references: [district_code])
@@ -170,44 +171,47 @@ model State {
 }
 
 model District {
-  district_code String @id
-  district_name String
-  state_code    String
-  state         State   @relation(fields: [state_code], references: [state_code], onDelete: Restrict)
-  tehsils       Tehsil[]
-  villages      Village[] // convenience backref for queries
-  relief_groups ReliefGroup[]
-  alerts        Alert[]
+  district_code    String @id
+  district_name    String
+  state_code       String
+  state            State          @relation(fields: [state_code], references: [state_code], onDelete: Restrict)
+  tehsils          Tehsil[]
+  villages         Village[]      // convenience backref for queries
+  relief_groups    ReliefGroup[]
+  alerts           Alert[]
+  service_requests ServiceRequest[]
   @@index([state_code])
   @@index([district_name])
   @@map("districts")
 }
 
 model Tehsil {
-  tehsil_code   String @id
-  tehsil_name   String
-  district_code String
-  district      District @relation(fields: [district_code], references: [district_code], onDelete: Restrict)
-  villages      Village[]
-  relief_groups ReliefGroup[]
-  alerts        Alert[]
+  tehsil_code      String @id
+  tehsil_name      String
+  district_code    String
+  district         District       @relation(fields: [district_code], references: [district_code], onDelete: Restrict)
+  villages         Village[]
+  relief_groups    ReliefGroup[]
+  alerts           Alert[]
+  service_requests ServiceRequest[]
   @@index([district_code])
   @@index([tehsil_name])
   @@map("tehsils")
 }
 
 model Village {
-  village_code  String @id
-  village_name  String
-  tehsil_code   String
-  district_code String
-  tehsil        Tehsil   @relation(fields: [tehsil_code], references: [tehsil_code], onDelete: Restrict)
-  district      District @relation(fields: [district_code], references: [district_code], onDelete: Restrict)
-  relief_groups ReliefGroup[]
-  alerts        Alert[]
+  village_code    String @id
+  village_name    String
+  tehsil_code     String
+  district_code   String
+  tehsil          Tehsil         @relation(fields: [tehsil_code], references: [tehsil_code], onDelete: Restrict)
+  district        District       @relation(fields: [district_code], references: [district_code], onDelete: Restrict)
+  relief_groups   ReliefGroup[]
+  alerts          Alert[]
+  service_requests ServiceRequest[]
   // Optional future enrichment
-  lat           Float?   // centroid later
-  lon           Float?
+  lat             Float?   // centroid later
+  lon             Float?
   @@index([tehsil_code])
   @@index([district_code])
   @@index([village_name])
@@ -309,4 +313,72 @@ model Service {
 
   @@map("services")
   @@unique([broad_category, subcategory])
+}
+
+model ServiceRequest {
+  request_id             String            @id @default(cuid())
+  request_number         String            @unique // e.g., "PFR20241201001"
+
+  // User Information
+  requester_name         String
+  requester_phone        String
+  requester_alt_phone    String?
+
+  // Location Information
+  village_id             String
+  village_name           String
+  tehsil_id              String
+  tehsil_name            String
+  district_id            String
+  district_name          String
+
+  // GPS Location (optional)
+  latitude               Float?
+  longitude              Float?
+  location_accuracy      Float?
+  location_source        String?
+
+  // Service Details
+  requested_services     String[]          // Array of service types (food, rescue, etc.)
+  service_details        Json?             // Additional details for each service
+  additional_notes       String?
+
+  // Metadata
+  language               String            @default("pa")
+  network_quality        String            @default("good")
+  client_timestamp       DateTime?
+  submitted_at           DateTime          @default(now())
+
+  // Status and Assignment
+  status                 ServiceRequestStatus @default(submitted)
+  priority               ServicePriority     @default(normal)
+  assigned_to_group      String?
+  assigned_at            DateTime?
+  completed_at           DateTime?
+  admin_notes            String?
+
+  // Relations
+  village                Village           @relation(fields: [village_id], references: [village_code])
+  tehsil                 Tehsil            @relation(fields: [tehsil_id], references: [tehsil_code])
+  district               District          @relation(fields: [district_id], references: [district_code])
+  assigned_group         ReliefGroup?      @relation(fields: [assigned_to_group], references: [group_id])
+
+  @@map("service_requests")
+}
+
+enum ServiceRequestStatus {
+  submitted
+  under_review
+  assigned
+  in_progress
+  completed
+  cancelled
+  rejected
+}
+
+enum ServicePriority {
+  low
+  normal
+  high
+  critical
 }
